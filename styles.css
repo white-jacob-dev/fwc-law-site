@@ -139,8 +139,8 @@ h6 {
 
 h1 {
   font-size: var(--text-5xl);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 h2 {
@@ -217,7 +217,7 @@ p:last-child {
 
 .logo-text {
   font-family: var(--font-serif);
-  font-size: var(--text-xl);
+  font-size: var(--text-2xl);
   font-weight: 600;
   color: var(--color-white);
   letter-spacing: 0.01em;
@@ -231,9 +231,10 @@ p:last-child {
   font-family: var(--font-sans);
   font-size: var(--text-xs);
   font-weight: 500;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-gray);
+  margin-top: 4px;
 }
 
 /* Navigation */
@@ -410,6 +411,8 @@ p:last-child {
   color: var(--color-white);
   margin-bottom: var(--space-xl);
   text-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
+  letter-spacing: -0.015em;
 }
 
 .hero-description {
@@ -539,6 +542,44 @@ p:last-child {
   color: var(--color-white);
 }
 
+/* Light background variant for practice areas page */
+.practice-preview--light {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+}
+
+.practice-preview--light .section-header h2 {
+  color: var(--color-navy-deep);
+}
+
+.practice-preview--light .section-label {
+  color: var(--color-gold-dark);
+}
+
+.practice-preview--light .practice-card {
+  background-color: var(--color-navy-deep);
+  color: var(--color-white);
+  border-left: 3px solid var(--color-gold);
+}
+
+.practice-preview--light .practice-card h3 {
+  color: var(--color-white);
+}
+
+.practice-preview--light .practice-card p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.practice-preview--light .practice-card:hover {
+  background-color: var(--color-navy);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(10, 25, 47, 0.3);
+}
+
+.practice-preview--light .practice-link {
+  color: var(--color-gold);
+}
+
 .practice-preview .section-header h2 {
   color: var(--color-white);
 }
@@ -638,6 +679,12 @@ p:last-child {
    ============================================ */
 .story-teaser {
   background-color: var(--color-cream);
+}
+
+/* When story-teaser follows a light practice-preview, add visual separation */
+.practice-preview--light + .story-teaser {
+  background-color: var(--color-white);
+  border-top: 1px solid rgba(10, 25, 47, 0.08);
 }
 
 .story-grid {
@@ -901,19 +948,85 @@ p:last-child {
 
 .footer-main {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: var(--space-4xl);
+  grid-template-columns: 1fr auto;
+  gap: var(--space-3xl);
   padding-bottom: var(--space-2xl);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: start;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-3xl);
+}
+
+/* Footer Map */
+.footer-map-wrapper {
+  width: 240px;
+  height: 160px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer-map-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.footer-map-link iframe {
+  width: 100%;
+  height: 100%;
+  filter: saturate(0.3) hue-rotate(180deg) brightness(0.85) contrast(1.1);
+  transition: filter var(--transition-base);
+  pointer-events: none;
+}
+
+.footer-map-wrapper:hover iframe {
+  filter: saturate(0.5) hue-rotate(180deg) brightness(0.9) contrast(1.15);
+}
+
+.footer-map-link .map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 22, 40, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.footer-map-wrapper:hover .map-overlay {
+  opacity: 1;
+}
+
+.footer-map-link .map-cta {
+  padding: var(--space-xs) var(--space-md);
+  background: var(--color-gold);
+  color: var(--color-navy-deep);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 2px;
 }
 
 .footer-brand .logo-text {
   color: var(--color-white);
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
 }
 
 .footer-brand .logo-suffix {
   color: var(--color-gray);
+  display: block;
+  margin-top: 2px;
 }
 
 .footer-tagline {
@@ -1569,6 +1682,18 @@ p:last-child {
   .footer-main {
     grid-template-columns: 1fr;
     gap: var(--space-2xl);
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .footer-map-wrapper {
+    width: 100%;
+    max-width: 280px;
+    height: 120px;
+    margin: 0 auto;
   }
 }
 
