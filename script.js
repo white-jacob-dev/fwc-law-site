@@ -1,6 +1,6 @@
 /**
  * Ferguson Widmayer & Clark PC
- * Minimal JavaScript for site functionality
+ * JavaScript for site functionality
  */
 
 (function() {
@@ -46,11 +46,11 @@
 
     /**
      * Handle smooth scroll for anchor links
-     * (Fallback for browsers without native smooth scroll support)
      */
     function handleSmoothScroll(event) {
         const href = event.currentTarget.getAttribute('href');
         
+        // Only handle same-page anchor links
         if (href.startsWith('#')) {
             const target = document.querySelector(href);
             
@@ -66,17 +66,22 @@
                 // Update URL without jumping
                 history.pushState(null, null, href);
             }
+        } else if (href.includes('#')) {
+            // Handle cross-page anchors (e.g., index.html#contact)
+            closeMobileMenu();
         }
     }
 
     /**
-     * Add subtle header shadow on scroll
+     * Add header styles on scroll
      */
     function handleHeaderScroll() {
-        const scrolled = window.scrollY > 10;
-        header.style.boxShadow = scrolled 
-            ? '0 1px 3px rgba(0, 0, 0, 0.08)' 
-            : 'none';
+        const scrolled = window.scrollY > 20;
+        if (scrolled) {
+            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+        } else {
+            header.style.boxShadow = 'none';
+        }
     }
 
     /**
@@ -123,6 +128,47 @@
     }
 
     /**
+     * Animate elements on scroll
+     */
+    function initScrollAnimations() {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe practice cards and attorney cards
+        document.querySelectorAll('.practice-card, .attorney-card, .value-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    }
+
+    /**
+     * Add visible class styles
+     */
+    function addVisibleStyles() {
+        const style = document.createElement('style');
+        style.textContent = `
+            .is-visible {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    /**
      * Initialize event listeners
      */
     function init() {
@@ -131,13 +177,13 @@
             mobileMenuToggle.addEventListener('click', toggleMobileMenu);
         }
 
-        // Nav links
+        // Nav links - handle both same-page and cross-page anchors
         navLinks.forEach(link => {
             link.addEventListener('click', handleSmoothScroll);
         });
 
         // Footer nav links
-        document.querySelectorAll('.footer-nav a[href^="#"]').forEach(link => {
+        document.querySelectorAll('.footer-nav a[href*="#"]').forEach(link => {
             link.addEventListener('click', handleSmoothScroll);
         });
 
@@ -146,6 +192,7 @@
 
         // Header scroll effect
         window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+        handleHeaderScroll(); // Check on load
 
         // Form submission
         const contactForm = document.querySelector('.contact-form');
@@ -159,6 +206,23 @@
                 closeMobileMenu();
             }
         });
+
+        // Initialize scroll animations
+        addVisibleStyles();
+        initScrollAnimations();
+
+        // Handle cross-page anchor scrolling
+        if (window.location.hash) {
+            setTimeout(() => {
+                const target = document.querySelector(window.location.hash);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }, 100);
+        }
     }
 
     // Initialize when DOM is ready
@@ -168,4 +232,3 @@
         init();
     }
 })();
-

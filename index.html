@@ -9,14 +9,16 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <header class="site-header">
         <div class="container">
-            <a href="/" class="logo" aria-label="Ferguson Widmayer & Clark PC Home">
+            <a href="index.html" class="logo" aria-label="Ferguson Widmayer & Clark PC Home">
                 <span class="logo-text">Ferguson Widmayer <span class="logo-ampersand">&</span> Clark</span>
                 <span class="logo-suffix">PC</span>
             </a>
@@ -29,22 +31,26 @@
             
             <nav class="main-nav" role="navigation" aria-label="Main navigation">
                 <ul class="nav-list">
-                    <li><a href="#about">Our Firm</a></li>
-                    <li><a href="#practice-areas">Practice Areas</a></li>
-                    <li><a href="#attorneys">Attorneys</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="practice-areas.html">Practice Areas</a></li>
+                    <li><a href="attorneys.html">Attorneys</a></li>
+                    <li><a href="our-story.html">Our Story</a></li>
+                    <li><a href="#contact" class="nav-cta">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <p class="hero-tagline">Established Counsel</p>
-                    <h1>Trusted Legal Guidance<br>for Life's Important Matters</h1>
+            <div class="hero-image">
+                <img src="images/hero.jpg" alt="Ferguson Widmayer & Clark historic office building at 538 North Division Street, Ann Arbor" loading="eager">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="container">
+                    <p class="hero-tagline">Established Counsel · Ann Arbor</p>
+                    <h1>Trusted Legal Guidance for Life's Important Matters</h1>
                     <p class="hero-description">For decades, we have provided thoughtful, personalized legal services to individuals, families, and businesses throughout Michigan.</p>
                     <div class="hero-cta">
                         <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
@@ -52,23 +58,55 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-accent" aria-hidden="true"></div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="section about-section">
+        <!-- Practice Areas Preview -->
+        <section class="section practice-preview">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-label">Our Firm</span>
-                    <h2>A Legacy of Excellence in Legal Practice</h2>
+                <div class="section-header section-header--center">
+                    <span class="section-label">What We Do</span>
+                    <h2>Areas of Practice</h2>
                 </div>
-                <div class="about-content">
-                    <div class="about-text">
+                <div class="practice-grid">
+                    <a href="estate-planning.html" class="practice-card">
+                        <div class="practice-number" aria-hidden="true">01</div>
+                        <h3>Estate Planning & Business Succession</h3>
+                        <p>Comprehensive planning to protect your assets and ensure your wishes are honored through wills, trusts, and succession strategies.</p>
+                        <span class="practice-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                    </a>
+                    
+                    <a href="business-law.html" class="practice-card">
+                        <div class="practice-number" aria-hidden="true">02</div>
+                        <h3>Employment & Business Law</h3>
+                        <p>Strategic counsel for businesses of all sizes, from formation and contracts to employment matters and commercial disputes.</p>
+                        <span class="practice-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                    </a>
+                    
+                    <a href="probate.html" class="practice-card">
+                        <div class="practice-number" aria-hidden="true">03</div>
+                        <h3>Probate & Trust Administration</h3>
+                        <p>Guiding families through estate settlement with sensitivity and efficiency, including probate proceedings and trust administration.</p>
+                        <span class="practice-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                    </a>
+                </div>
+                <div class="section-cta">
+                    <a href="practice-areas.html" class="btn btn-outline">View All Practice Areas</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Teaser -->
+        <section class="section story-teaser">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-content">
+                        <span class="section-label">Our Firm</span>
+                        <h2>A Legacy of Excellence</h2>
                         <p class="lead">Ferguson Widmayer & Clark PC has served the Ann Arbor community and surrounding areas with distinction, building lasting relationships founded on trust, integrity, and exceptional legal counsel.</p>
-                        <p>Our attorneys combine deep legal expertise with a genuine commitment to understanding each client's unique circumstances. We believe that effective representation begins with listening—taking the time to fully comprehend your goals, concerns, and the nuances of your situation.</p>
-                        <p>Whether you are planning for your family's future, navigating complex business matters, or settling an estate, we provide the careful attention and sound judgment that important legal matters demand.</p>
+                        <p>Our attorneys combine deep legal expertise with a genuine commitment to understanding each client's unique circumstances.</p>
+                        <a href="our-story.html" class="btn btn-primary">Read Our Story</a>
                     </div>
-                    <aside class="about-values">
+                    <aside class="story-values">
                         <div class="value-item">
                             <h3>Discretion</h3>
                             <p>Your matters are handled with the utmost confidentiality and care.</p>
@@ -86,65 +124,15 @@
             </div>
         </section>
 
-        <!-- Practice Areas Section -->
-        <section id="practice-areas" class="section practice-section">
+        <!-- Attorneys Preview -->
+        <section class="section attorneys-preview">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-label">What We Do</span>
-                    <h2>Practice Areas</h2>
-                </div>
-                <div class="practice-grid">
-                    <article class="practice-card">
-                        <div class="practice-number" aria-hidden="true">01</div>
-                        <h3>Estate Planning & Business Succession</h3>
-                        <p>Comprehensive planning to protect your assets and ensure your wishes are honored. We craft wills, trusts, powers of attorney, and succession strategies tailored to your family and business needs.</p>
-                        <ul class="practice-list">
-                            <li>Wills & Trusts</li>
-                            <li>Asset Protection</li>
-                            <li>Powers of Attorney</li>
-                            <li>Healthcare Directives</li>
-                            <li>Business Succession Planning</li>
-                        </ul>
-                    </article>
-                    
-                    <article class="practice-card">
-                        <div class="practice-number" aria-hidden="true">02</div>
-                        <h3>Employment & Business Law</h3>
-                        <p>Strategic counsel for businesses of all sizes. From formation and contracts to employment matters and disputes, we help you navigate the legal landscape with confidence.</p>
-                        <ul class="practice-list">
-                            <li>Business Formation</li>
-                            <li>Contract Drafting & Review</li>
-                            <li>Employment Agreements</li>
-                            <li>Commercial Transactions</li>
-                            <li>Business Disputes</li>
-                        </ul>
-                    </article>
-                    
-                    <article class="practice-card">
-                        <div class="practice-number" aria-hidden="true">03</div>
-                        <h3>Probate, Estate Settlement & Trust Administration</h3>
-                        <p>Guiding families through the estate settlement process with sensitivity and efficiency. We handle probate proceedings, trust administration, and estate litigation when necessary.</p>
-                        <ul class="practice-list">
-                            <li>Probate Administration</li>
-                            <li>Trust Administration</li>
-                            <li>Estate Litigation</li>
-                            <li>Guardianship & Conservatorship</li>
-                            <li>Fiduciary Representation</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Attorneys Section -->
-        <section id="attorneys" class="section attorneys-section">
-            <div class="container">
-                <div class="section-header">
+                <div class="section-header section-header--center">
                     <span class="section-label">Who We Are</span>
                     <h2>Our Attorneys</h2>
                     <p class="section-intro">Our team brings together decades of experience and a shared commitment to exceptional client service.</p>
                 </div>
-                <div class="attorneys-grid">
+                <div class="attorneys-grid attorneys-grid--preview">
                     <article class="attorney-card">
                         <div class="attorney-info">
                             <h3>Peter C. Clark</h3>
@@ -169,51 +157,9 @@
                             <p class="attorney-title">Attorney</p>
                         </div>
                     </article>
-                    <article class="attorney-card">
-                        <div class="attorney-info">
-                            <h3>Mara Kent</h3>
-                            <p class="attorney-title">Attorney</p>
-                        </div>
-                    </article>
-                    <article class="attorney-card">
-                        <div class="attorney-info">
-                            <h3>Miriam Saffo</h3>
-                            <p class="attorney-title">Attorney</p>
-                        </div>
-                    </article>
-                    <article class="attorney-card">
-                        <div class="attorney-info">
-                            <h3>Warren J. Widmayer</h3>
-                            <p class="attorney-title">Of Counsel</p>
-                        </div>
-                    </article>
-                    <article class="attorney-card">
-                        <div class="attorney-info">
-                            <h3>Nicole Appleberry</h3>
-                            <p class="attorney-title">Attorney</p>
-                        </div>
-                    </article>
-                    <article class="attorney-card">
-                        <div class="attorney-info">
-                            <h3>Karen T. Mendelson</h3>
-                            <p class="attorney-title">Attorney</p>
-                        </div>
-                    </article>
-                    <article class="attorney-card">
-                        <div class="attorney-info">
-                            <h3>Mark Hopper</h3>
-                            <p class="attorney-title">Attorney</p>
-                        </div>
-                    </article>
-                    <article class="attorney-card">
-                        <div class="attorney-info">
-                            <h3>Nancy H. Welber</h3>
-                            <p class="attorney-title">Attorney</p>
-                        </div>
-                    </article>
                 </div>
-                <div class="memorial-note">
-                    <p>In memory of our founding partners Larry Ferguson and Walter B. Ranney, whose vision and dedication established the foundation of our firm.</p>
+                <div class="section-cta">
+                    <a href="attorneys.html" class="btn btn-outline">Meet Our Full Team</a>
                 </div>
             </div>
         </section>
@@ -227,7 +173,7 @@
                             <span class="section-label">Contact Us</span>
                             <h2>Begin the Conversation</h2>
                         </div>
-                        <p class="contact-intro">We welcome the opportunity to learn about your legal needs. Contact our office to schedule a consultation with one of our attorneys.</p>
+                        <p class="contact-intro">We welcome the opportunity to learn about your legal needs. Contact our office to schedule a consultation.</p>
                         
                         <address class="contact-details">
                             <div class="contact-item">
@@ -277,9 +223,9 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="4" required></textarea>
                         </div>
-                        <p class="form-disclaimer">Please do not include confidential or sensitive information in your message. Contacting us does not create an attorney-client relationship.</p>
+                        <p class="form-disclaimer">Please do not include confidential information. Contacting us does not create an attorney-client relationship.</p>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
@@ -299,18 +245,18 @@
                     <div class="footer-nav-group">
                         <h4>Navigation</h4>
                         <ul>
-                            <li><a href="#about">Our Firm</a></li>
-                            <li><a href="#practice-areas">Practice Areas</a></li>
-                            <li><a href="#attorneys">Attorneys</a></li>
+                            <li><a href="practice-areas.html">Practice Areas</a></li>
+                            <li><a href="attorneys.html">Attorneys</a></li>
+                            <li><a href="our-story.html">Our Story</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer-nav-group">
                         <h4>Practice Areas</h4>
                         <ul>
-                            <li><a href="#practice-areas">Estate Planning</a></li>
-                            <li><a href="#practice-areas">Business Law</a></li>
-                            <li><a href="#practice-areas">Probate</a></li>
+                            <li><a href="estate-planning.html">Estate Planning</a></li>
+                            <li><a href="business-law.html">Business Law</a></li>
+                            <li><a href="probate.html">Probate</a></li>
                         </ul>
                     </div>
                     <div class="footer-nav-group">
@@ -337,4 +283,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
