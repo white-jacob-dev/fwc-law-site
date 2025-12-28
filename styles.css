@@ -3,1186 +3,1451 @@
    Premium Law Firm Styles
    ============================================ */
 
+/* Script Font for decorative initials */
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+
 /* CSS Variables */
 :root {
-    /* Navy Color Palette */
-    --color-navy-deep: #0a1628;
-    --color-navy: #122340;
-    --color-navy-light: #1e3a5f;
-    --color-navy-mid: #2a4a73;
-    
-    /* Gold Accents */
-    --color-gold: #c9a962;
-    --color-gold-muted: #a68b5b;
-    --color-gold-light: #dcc98a;
-    
-    /* Neutrals */
-    --color-white: #ffffff;
-    --color-off-white: #f7f6f4;
-    --color-cream: #f0ede8;
-    --color-gray-light: #e4e2de;
-    --color-gray: #8a8580;
-    --color-gray-dark: #5c5752;
-    --color-charcoal: #3a3530;
-    --color-text: #2d2a26;
-    
-    /* Typography */
-    --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
-    --font-sans: 'Libre Franklin', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    
-    --text-xs: 0.75rem;
-    --text-sm: 0.875rem;
-    --text-base: 1rem;
-    --text-lg: 1.125rem;
-    --text-xl: 1.25rem;
-    --text-2xl: 1.5rem;
-    --text-3xl: 2rem;
-    --text-4xl: 2.75rem;
-    --text-5xl: 3.5rem;
-    --text-6xl: 4.5rem;
-    
-    /* Spacing - Tighter */
-    --space-xs: 0.375rem;
-    --space-sm: 0.625rem;
-    --space-md: 1rem;
-    --space-lg: 1.25rem;
-    --space-xl: 1.75rem;
-    --space-2xl: 2.5rem;
-    --space-3xl: 3.5rem;
-    --space-4xl: 5rem;
-    --space-5xl: 6rem;
-    
-    /* Layout */
-    --max-width: 1320px;
-    --header-height: 76px;
-    
-    /* Transitions */
-    --transition-fast: 150ms ease;
-    --transition-base: 280ms cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  --font-script: 'Mea Culpa', cursive;
+
+  /* Navy Color Palette */
+  --color-navy-deep: #0a1628;
+  --color-navy: #122340;
+  --color-navy-light: #1e3a5f;
+  --color-navy-mid: #2a4a73;
+
+  /* Gold Accents */
+  --color-gold: #c9a962;
+  --color-gold-muted: #a68b5b;
+  --color-gold-light: #dcc98a;
+
+  /* Neutrals */
+  --color-white: #ffffff;
+  --color-off-white: #f7f6f4;
+  --color-cream: #f0ede8;
+  --color-gray-light: #e4e2de;
+  --color-gray: #8a8580;
+  --color-gray-dark: #5c5752;
+  --color-charcoal: #3a3530;
+  --color-text: #2d2a26;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Libre Franklin', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.75rem;
+  --text-5xl: 3.5rem;
+  --text-6xl: 4.5rem;
+
+  /* Spacing - Tighter */
+  --space-xs: 0.375rem;
+  --space-sm: 0.625rem;
+  --space-md: 1rem;
+  --space-lg: 1.25rem;
+  --space-xl: 1.75rem;
+  --space-2xl: 2.5rem;
+  --space-3xl: 3.5rem;
+  --space-4xl: 5rem;
+  --space-5xl: 6rem;
+
+  /* Layout */
+  --max-width: 1320px;
+  --header-height: 76px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 450ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ============================================
    Reset & Base
    ============================================ */
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: var(--header-height);
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
 }
 
 body {
-    font-family: var(--font-sans);
-    font-size: var(--text-base);
-    font-weight: 400;
-    line-height: 1.65;
-    color: var(--color-text);
-    background-color: var(--color-white);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
-ul, ol {
-    list-style: none;
+ul,
+ol {
+  list-style: none;
 }
 
 button {
-    font-family: inherit;
-    font-size: inherit;
-    cursor: pointer;
-    border: none;
-    background: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
 }
 
 address {
-    font-style: normal;
+  font-style: normal;
 }
 
 /* ============================================
    Typography
    ============================================ */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-serif);
-    font-weight: 700;
-    line-height: 1.15;
-    color: var(--color-navy);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--color-navy);
 }
 
 h1 {
-    font-size: var(--text-5xl);
-    font-weight: 800;
-    letter-spacing: -0.025em;
+  font-size: var(--text-5xl);
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 h2 {
-    font-size: var(--text-4xl);
-    font-weight: 700;
-    letter-spacing: -0.015em;
+  font-size: var(--text-4xl);
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 h3 {
-    font-size: var(--text-2xl);
-    font-weight: 600;
+  font-size: var(--text-2xl);
+  font-weight: 500;
 }
 
 h4 {
-    font-size: var(--text-xl);
-    font-weight: 600;
+  font-size: var(--text-xl);
+  font-weight: 500;
 }
 
 p {
-    margin-bottom: var(--space-md);
+  margin-bottom: var(--space-md);
 }
 
 p:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .lead {
-    font-size: var(--text-xl);
-    line-height: 1.6;
-    color: var(--color-charcoal);
+  font-size: var(--text-xl);
+  line-height: 1.6;
+  color: var(--color-charcoal);
 }
 
 /* ============================================
    Layout
    ============================================ */
 .container {
-    width: 100%;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 var(--space-xl);
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
 }
 
 .section {
-    padding: var(--space-5xl) 0;
+  padding: var(--space-5xl) 0;
 }
 
 /* ============================================
    Header
    ============================================ */
 .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--header-height);
-    background-color: var(--color-navy-deep);
-    z-index: 1000;
-    transition: box-shadow var(--transition-base);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: var(--color-navy-deep);
+  z-index: 1000;
+  transition: box-shadow var(--transition-base);
 }
 
 .site-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
 }
 
 /* Logo */
 .logo {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
 }
 
 .logo-text {
-    font-family: var(--font-serif);
-    font-size: var(--text-xl);
-    font-weight: 600;
-    color: var(--color-white);
-    letter-spacing: 0.01em;
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-white);
+  letter-spacing: 0.01em;
 }
 
 .logo-ampersand {
-    color: var(--color-gold);
+  color: var(--color-gold);
 }
 
 .logo-suffix {
-    font-family: var(--font-sans);
-    font-size: var(--text-xs);
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--color-gray);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gray);
 }
 
 /* Navigation */
 .main-nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .nav-list {
-    display: flex;
-    gap: var(--space-2xl);
-    align-items: center;
+  display: flex;
+  gap: var(--space-2xl);
+  align-items: center;
 }
 
 .nav-list a {
-    font-size: var(--text-sm);
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.85);
-    position: relative;
-    padding: var(--space-xs) 0;
-    transition: color var(--transition-fast);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  padding: var(--space-xs) 0;
+  transition: color var(--transition-fast);
 }
 
 .nav-list a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-gold);
-    transition: width var(--transition-base);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-gold);
+  transition: width var(--transition-base);
 }
 
 .nav-list a:hover,
 .nav-list a:focus {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 .nav-list a:hover::after,
 .nav-list a:focus::after {
-    width: 100%;
+  width: 100%;
 }
 
 .nav-cta {
-    background-color: var(--color-gold) !important;
-    color: var(--color-navy-deep) !important;
-    padding: var(--space-sm) var(--space-lg) !important;
-    border-radius: 2px;
-    font-weight: 600 !important;
+  background-color: var(--color-gold) !important;
+  color: var(--color-navy-deep) !important;
+  padding: var(--space-sm) var(--space-lg) !important;
+  border-radius: 2px;
+  font-weight: 600 !important;
 }
 
 .nav-cta::after {
-    display: none !important;
+  display: none !important;
 }
 
 .nav-cta:hover {
-    background-color: var(--color-gold-light) !important;
+  background-color: var(--color-gold-light) !important;
 }
 
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 32px;
-    height: 32px;
-    padding: 4px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
 }
 
 .menu-bar {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-white);
-    transition: transform var(--transition-base), opacity var(--transition-base);
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-white);
+  transition: transform var(--transition-base), opacity var(--transition-base);
 }
 
-.mobile-menu-toggle[aria-expanded="true"] .menu-bar:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+.mobile-menu-toggle[aria-expanded='true'] .menu-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
 }
 
-.mobile-menu-toggle[aria-expanded="true"] .menu-bar:nth-child(2) {
-    opacity: 0;
+.mobile-menu-toggle[aria-expanded='true'] .menu-bar:nth-child(2) {
+  opacity: 0;
 }
 
-.mobile-menu-toggle[aria-expanded="true"] .menu-bar:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+.mobile-menu-toggle[aria-expanded='true'] .menu-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ============================================
    Hero Section
    ============================================ */
 .hero {
-    position: relative;
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 30%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
 }
 
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        135deg,
-        rgba(10, 22, 40, 0.92) 0%,
-        rgba(18, 35, 64, 0.85) 40%,
-        rgba(30, 58, 95, 0.7) 100%
-    );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(10, 22, 40, 0.92) 0%, rgba(18, 35, 64, 0.85) 40%, rgba(30, 58, 95, 0.7) 100%);
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    padding: calc(var(--header-height) + var(--space-4xl)) 0 var(--space-4xl);
-    width: 100%;
+  position: relative;
+  z-index: 2;
+  padding: calc(var(--header-height) + var(--space-4xl)) 0 var(--space-4xl);
+  width: 100%;
 }
 
 .hero-content .container {
-    max-width: 800px;
-    margin: 0;
-    padding-left: var(--space-xl);
+  max-width: 800px;
+  margin: 0;
+  padding-left: var(--space-xl);
 }
 
 .hero-tagline {
-    font-family: var(--font-sans);
-    font-size: var(--text-sm);
-    font-weight: 500;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--color-gold);
-    margin-bottom: var(--space-lg);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-lg);
 }
 
 .hero h1 {
-    color: var(--color-white);
-    margin-bottom: var(--space-xl);
-    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+  color: var(--color-white);
+  margin-bottom: var(--space-xl);
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hero-description {
-    font-size: var(--text-xl);
-    color: rgba(255, 255, 255, 0.85);
-    margin-bottom: var(--space-2xl);
-    max-width: 560px;
-    line-height: 1.7;
+  font-size: var(--text-xl);
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: var(--space-2xl);
+  max-width: 560px;
+  line-height: 1.7;
 }
 
 .hero-cta {
-    display: flex;
-    gap: var(--space-md);
-    flex-wrap: wrap;
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
 }
 
 /* ============================================
    Buttons
    ============================================ */
 .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--space-md) var(--space-xl);
-    font-family: var(--font-sans);
-    font-size: var(--text-sm);
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: all var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md) var(--space-xl);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all var(--transition-base);
 }
 
 .btn-primary {
-    background-color: var(--color-gold);
-    color: var(--color-navy-deep);
-    border: 2px solid var(--color-gold);
+  background-color: var(--color-gold);
+  color: var(--color-navy-deep);
+  border: 2px solid var(--color-gold);
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color: var(--color-gold-light);
-    border-color: var(--color-gold-light);
+  background-color: var(--color-gold-light);
+  border-color: var(--color-gold-light);
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: var(--color-white);
-    border: 2px solid rgba(255, 255, 255, 0.4);
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
-    border-color: var(--color-white);
-    background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn-outline {
-    background-color: transparent;
-    color: var(--color-navy);
-    border: 2px solid var(--color-navy);
+  background-color: transparent;
+  color: var(--color-navy);
+  border: 2px solid var(--color-navy);
 }
 
 .btn-outline:hover,
 .btn-outline:focus {
-    background-color: var(--color-navy);
-    color: var(--color-white);
+  background-color: var(--color-navy);
+  color: var(--color-white);
 }
 
 .btn-outline-light {
-    background-color: transparent;
-    color: var(--color-white);
-    border: 2px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .btn-outline-light:hover,
 .btn-outline-light:focus {
-    background-color: var(--color-white);
-    color: var(--color-navy);
-    border-color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  border-color: var(--color-white);
 }
 
 /* ============================================
    Section Headers
    ============================================ */
 .section-header {
-    margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-3xl);
 }
 
 .section-header--center {
-    text-align: center;
+  text-align: center;
 }
 
 .section-header--center .section-intro {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-label {
-    display: block;
-    font-family: var(--font-sans);
-    font-size: var(--text-xs);
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--color-gold-muted);
-    margin-bottom: var(--space-sm);
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold-muted);
+  margin-bottom: var(--space-sm);
 }
 
 .section-intro {
-    font-size: var(--text-lg);
-    color: var(--color-gray-dark);
-    max-width: 600px;
-    margin-top: var(--space-md);
+  font-size: var(--text-lg);
+  color: var(--color-gray-dark);
+  max-width: 600px;
+  margin-top: var(--space-md);
 }
 
 .section-cta {
-    text-align: center;
-    margin-top: var(--space-3xl);
+  text-align: center;
+  margin-top: var(--space-3xl);
 }
 
 /* ============================================
    Practice Areas Preview
    ============================================ */
 .practice-preview {
-    background-color: var(--color-navy-deep);
-    color: var(--color-white);
+  background-color: var(--color-navy-deep);
+  color: var(--color-white);
 }
 
 .practice-preview .section-header h2 {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 .practice-preview .section-label {
-    color: var(--color-gold);
+  color: var(--color-gold);
 }
 
 .practice-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
 }
 
 .practice-card {
-    display: block;
-    padding: var(--space-2xl);
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: all var(--transition-base);
-    position: relative;
+  display: block;
+  padding: var(--space-2xl);
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all var(--transition-base);
+  position: relative;
 }
 
 .practice-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: var(--color-gold);
-    transition: width var(--transition-base);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--color-gold);
+  transition: width var(--transition-base);
 }
 
 .practice-card:hover {
-    background-color: rgba(255, 255, 255, 0.06);
-    transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.06);
+  transform: translateY(-4px);
 }
 
 .practice-card:hover::before {
-    width: 100%;
+  width: 100%;
 }
 
 .practice-number {
-    font-family: var(--font-serif);
-    font-size: var(--text-sm);
-    color: var(--color-gold);
-    margin-bottom: var(--space-lg);
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  color: var(--color-gold);
+  margin-bottom: var(--space-lg);
 }
 
 .practice-card h3 {
-    font-size: var(--text-xl);
-    font-weight: 600;
-    color: var(--color-white);
-    margin-bottom: var(--space-md);
-    line-height: 1.35;
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-white);
+  margin-bottom: var(--space-md);
+  line-height: 1.35;
 }
 
 .practice-card > p {
-    font-size: var(--text-sm);
-    color: var(--color-gray);
-    line-height: 1.7;
-    margin-bottom: var(--space-xl);
+  font-size: var(--text-sm);
+  color: var(--color-gray);
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
 }
 
 .practice-link {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-xs);
-    font-size: var(--text-sm);
-    font-weight: 500;
-    color: var(--color-gold);
-    letter-spacing: 0.03em;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-gold);
+  letter-spacing: 0.03em;
 }
 
 .practice-link svg {
-    transition: transform var(--transition-base);
+  transition: transform var(--transition-base);
 }
 
 .practice-card:hover .practice-link svg {
-    transform: translateX(4px);
+  transform: translateX(4px);
 }
 
 .practice-preview .section-cta .btn-outline {
-    color: var(--color-white);
-    border-color: rgba(255, 255, 255, 0.4);
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .practice-preview .section-cta .btn-outline:hover {
-    background-color: var(--color-white);
-    color: var(--color-navy);
-    border-color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  border-color: var(--color-white);
 }
 
 /* ============================================
    Story Teaser
    ============================================ */
 .story-teaser {
-    background-color: var(--color-cream);
+  background-color: var(--color-cream);
 }
 
 .story-grid {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: var(--space-4xl);
-    align-items: start;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--space-4xl);
+  align-items: start;
 }
 
 .story-content {
-    max-width: 580px;
+  max-width: 580px;
 }
 
 .story-content h2 {
-    margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-lg);
 }
 
 .story-content .lead {
-    margin-bottom: var(--space-md);
+  margin-bottom: var(--space-md);
 }
 
 .story-content .btn {
-    margin-top: var(--space-xl);
+  margin-top: var(--space-xl);
 }
 
 .story-values {
-    padding: var(--space-2xl);
-    background-color: var(--color-navy);
-    color: var(--color-white);
+  padding: var(--space-2xl);
+  background-color: var(--color-navy);
+  color: var(--color-white);
 }
 
 .value-item {
-    margin-bottom: var(--space-xl);
-    padding-bottom: var(--space-xl);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .value-item:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 .value-item h3 {
-    font-size: var(--text-lg);
-    color: var(--color-gold);
-    margin-bottom: var(--space-xs);
+  font-size: var(--text-lg);
+  color: var(--color-gold);
+  margin-bottom: var(--space-xs);
 }
 
 .value-item p {
-    font-size: var(--text-sm);
-    color: rgba(255, 255, 255, 0.75);
-    line-height: 1.6;
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
 }
 
 /* ============================================
    Attorneys Preview
    ============================================ */
 .attorneys-preview {
-    background-color: var(--color-navy);
+  background-color: var(--color-navy);
 }
 
 .attorneys-preview .section-header h2 {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 .attorneys-preview .section-label {
-    color: var(--color-gold);
+  color: var(--color-gold);
 }
 
 .attorneys-preview .section-intro {
-    color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .attorneys-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-lg);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
 }
 
 .attorneys-grid--preview {
-    max-width: 1000px;
-    margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .attorney-card {
-    padding: var(--space-xl);
-    background-color: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    text-align: center;
-    transition: all var(--transition-base);
+  padding: var(--space-xl);
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  transition: all var(--transition-base);
 }
 
 .attorney-card:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-color: var(--color-gold);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-gold);
 }
 
 .attorney-info h3 {
-    font-size: var(--text-lg);
-    font-weight: 600;
-    color: var(--color-white);
-    margin-bottom: var(--space-xs);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-white);
+  margin-bottom: var(--space-xs);
 }
 
 .attorney-title {
-    font-size: var(--text-sm);
-    color: var(--color-gold-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+  font-size: var(--text-sm);
+  color: var(--color-gold-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .attorneys-preview .section-cta .btn-outline {
-    color: var(--color-white);
-    border-color: rgba(255, 255, 255, 0.4);
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .attorneys-preview .section-cta .btn-outline:hover {
-    background-color: var(--color-white);
-    color: var(--color-navy);
-    border-color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  border-color: var(--color-white);
 }
 
 /* ============================================
    Contact Section
    ============================================ */
 .contact-section {
-    background-color: var(--color-white);
+  background-color: var(--color-white);
 }
 
 .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: var(--space-4xl);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-4xl);
 }
 
 .contact-intro {
-    font-size: var(--text-lg);
-    color: var(--color-gray-dark);
-    margin-bottom: var(--space-2xl);
+  font-size: var(--text-lg);
+  color: var(--color-gray-dark);
+  margin-bottom: var(--space-2xl);
 }
 
 .contact-details {
-    margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-xl);
 }
 
 .contact-item {
-    margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-lg);
 }
 
 .contact-item h3 {
-    font-family: var(--font-sans);
-    font-size: var(--text-xs);
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--color-gray);
-    margin-bottom: var(--space-xs);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gray);
+  margin-bottom: var(--space-xs);
 }
 
 .contact-item p {
-    font-size: var(--text-lg);
+  font-size: var(--text-lg);
 }
 
 .contact-item a {
-    color: var(--color-navy);
-    transition: color var(--transition-fast);
+  color: var(--color-navy);
+  transition: color var(--transition-fast);
 }
 
 .contact-item a:hover {
-    color: var(--color-gold-muted);
+  color: var(--color-gold-muted);
 }
 
 .office-hours h3 {
-    font-family: var(--font-sans);
-    font-size: var(--text-xs);
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--color-gray);
-    margin-bottom: var(--space-xs);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gray);
+  margin-bottom: var(--space-xs);
 }
 
 /* Contact Form */
 .contact-form {
-    padding: var(--space-2xl);
-    background-color: var(--color-navy);
+  padding: var(--space-2xl);
+  background-color: var(--color-navy);
 }
 
 .form-group {
-    margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-lg);
 }
 
 .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
 }
 
 .contact-form label {
-    display: block;
-    font-size: var(--text-sm);
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: var(--space-xs);
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--space-xs);
 }
 
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
-    width: 100%;
-    padding: var(--space-md);
-    font-family: var(--font-sans);
-    font-size: var(--text-base);
-    color: var(--color-text);
-    background-color: var(--color-white);
-    border: 2px solid transparent;
-    border-radius: 2px;
-    transition: border-color var(--transition-fast);
+  width: 100%;
+  padding: var(--space-md);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  border: 2px solid transparent;
+  border-radius: 2px;
+  transition: border-color var(--transition-fast);
 }
 
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-    outline: none;
-    border-color: var(--color-gold);
+  outline: none;
+  border-color: var(--color-gold);
 }
 
 .contact-form textarea {
-    resize: vertical;
-    min-height: 100px;
+  resize: vertical;
+  min-height: 100px;
 }
 
 .contact-form select {
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b6560' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right var(--space-md) center;
-    padding-right: var(--space-2xl);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b6560' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-md) center;
+  padding-right: var(--space-2xl);
 }
 
 .form-disclaimer {
-    font-size: var(--text-sm);
-    color: rgba(255, 255, 255, 0.6);
-    margin-bottom: var(--space-lg);
-    line-height: 1.5;
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: var(--space-lg);
+  line-height: 1.5;
 }
 
 .contact-form .btn {
-    width: 100%;
+  width: 100%;
 }
 
 /* ============================================
    Footer
    ============================================ */
 .site-footer {
-    background-color: var(--color-navy-deep);
-    color: var(--color-gray);
-    padding: var(--space-4xl) 0 var(--space-2xl);
+  background-color: var(--color-navy-deep);
+  color: var(--color-gray);
+  padding: var(--space-4xl) 0 var(--space-2xl);
 }
 
 .footer-main {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: var(--space-4xl);
-    padding-bottom: var(--space-2xl);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-4xl);
+  padding-bottom: var(--space-2xl);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-brand .logo-text {
-    color: var(--color-white);
-    font-size: var(--text-lg);
+  color: var(--color-white);
+  font-size: var(--text-lg);
 }
 
 .footer-brand .logo-suffix {
-    color: var(--color-gray);
+  color: var(--color-gray);
 }
 
 .footer-tagline {
-    margin-top: var(--space-md);
-    font-size: var(--text-sm);
+  margin-top: var(--space-md);
+  font-size: var(--text-sm);
 }
 
 .footer-nav {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-2xl);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xl);
 }
 
 .footer-nav h4 {
-    font-family: var(--font-sans);
-    font-size: var(--text-xs);
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--color-white);
-    margin-bottom: var(--space-lg);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin-bottom: var(--space-lg);
 }
 
 .footer-nav ul li {
-    margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-sm);
 }
 
 .footer-nav a {
-    font-size: var(--text-sm);
-    transition: color var(--transition-fast);
+  font-size: var(--text-sm);
+  transition: color var(--transition-fast);
 }
 
 .footer-nav a:hover {
-    color: var(--color-gold);
+  color: var(--color-gold);
 }
 
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: var(--space-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-xl);
 }
 
 .copyright {
-    font-size: var(--text-sm);
+  font-size: var(--text-sm);
 }
 
 .footer-legal {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
-    font-size: var(--text-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: var(--text-sm);
 }
 
 .footer-legal a {
-    transition: color var(--transition-fast);
+  transition: color var(--transition-fast);
 }
 
 .footer-legal a:hover {
-    color: var(--color-gold);
+  color: var(--color-gold);
 }
 
 .footer-legal .divider {
-    color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.2);
 }
 
 /* ============================================
    Page Header (for interior pages)
    ============================================ */
 .page-header {
-    padding: calc(var(--header-height) + var(--space-4xl)) 0 var(--space-3xl);
-    background-color: var(--color-navy-deep);
-    text-align: center;
+  padding: calc(var(--header-height) + var(--space-4xl)) 0 var(--space-3xl);
+  background-color: var(--color-navy-deep);
+  text-align: center;
 }
 
 .page-header h1 {
-    color: var(--color-white);
-    margin-bottom: var(--space-md);
+  color: var(--color-white);
+  margin-bottom: var(--space-md);
 }
 
 .page-header .section-label {
-    color: var(--color-gold);
+  color: var(--color-gold);
 }
 
 .page-header p {
-    color: rgba(255, 255, 255, 0.75);
-    font-size: var(--text-lg);
-    max-width: 600px;
-    margin: 0 auto;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: var(--text-lg);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* Breadcrumb */
 .breadcrumb {
-    margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-xl);
 }
 
 .breadcrumb ul {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-sm);
-    font-size: var(--text-sm);
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  font-size: var(--text-sm);
 }
 
 .breadcrumb a {
-    color: rgba(255, 255, 255, 0.6);
-    transition: color var(--transition-fast);
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition-fast);
 }
 
 .breadcrumb a:hover {
-    color: var(--color-gold);
+  color: var(--color-gold);
 }
 
 .breadcrumb .separator {
-    color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .breadcrumb .current {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 /* ============================================
    Practice Area Detail Page
    ============================================ */
 .practice-detail {
-    background-color: var(--color-white);
+  background-color: var(--color-white);
 }
 
 .practice-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: var(--space-4xl);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-4xl);
 }
 
 .practice-main h2 {
-    font-size: var(--text-3xl);
-    margin-top: var(--space-3xl);
-    margin-bottom: var(--space-lg);
+  font-size: var(--text-3xl);
+  margin-top: var(--space-3xl);
+  margin-bottom: var(--space-lg);
 }
 
 .practice-main h2:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .practice-main ul {
-    margin: var(--space-lg) 0;
-    padding-left: var(--space-xl);
+  margin: var(--space-lg) 0;
+  padding-left: var(--space-xl);
 }
 
 .practice-main ul li {
-    position: relative;
-    padding-left: var(--space-lg);
-    margin-bottom: var(--space-sm);
+  position: relative;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-sm);
 }
 
 .practice-main ul li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 6px;
-    height: 6px;
-    background-color: var(--color-gold);
-    border-radius: 50%;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-gold);
+  border-radius: 50%;
 }
 
 .practice-sidebar {
-    position: sticky;
-    top: calc(var(--header-height) + var(--space-xl));
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-xl));
 }
 
 .sidebar-card {
-    padding: var(--space-2xl);
-    background-color: var(--color-navy);
-    color: var(--color-white);
-    margin-bottom: var(--space-lg);
+  padding: var(--space-2xl);
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  margin-bottom: var(--space-lg);
 }
 
 .sidebar-card h3 {
-    color: var(--color-white);
-    font-size: var(--text-xl);
-    margin-bottom: var(--space-lg);
+  color: var(--color-white);
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-lg);
 }
 
 .sidebar-card p {
-    font-size: var(--text-sm);
-    color: rgba(255, 255, 255, 0.75);
-    margin-bottom: var(--space-lg);
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: var(--space-lg);
 }
 
 .sidebar-card .btn {
-    width: 100%;
+  width: 100%;
 }
 
 .related-practices {
-    padding: var(--space-2xl);
-    background-color: var(--color-cream);
+  padding: var(--space-2xl);
+  background-color: var(--color-cream);
 }
 
 .related-practices h3 {
-    font-size: var(--text-lg);
-    margin-bottom: var(--space-lg);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-lg);
 }
 
 .related-practices ul li {
-    margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-sm);
 }
 
 .related-practices a {
-    font-size: var(--text-sm);
-    color: var(--color-navy);
-    display: flex;
-    align-items: center;
-    gap: var(--space-xs);
-    transition: color var(--transition-fast);
+  font-size: var(--text-sm);
+  color: var(--color-navy);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  transition: color var(--transition-fast);
 }
 
 .related-practices a:hover {
-    color: var(--color-gold-muted);
+  color: var(--color-gold-muted);
 }
 
 /* ============================================
    Attorneys Page
    ============================================ */
 .attorneys-full {
-    background-color: var(--color-off-white);
+  background-color: var(--color-off-white);
 }
 
 .attorneys-full .attorneys-grid {
-    grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .attorneys-full .attorney-card {
-    background-color: var(--color-white);
-    border-color: var(--color-gray-light);
+  background-color: var(--color-white);
+  border-color: var(--color-gray-light);
 }
 
 .attorneys-full .attorney-card:hover {
-    border-color: var(--color-gold);
+  border-color: var(--color-gold);
 }
 
 .attorneys-full .attorney-info h3 {
-    color: var(--color-navy);
+  color: var(--color-navy);
 }
 
 .attorneys-full .attorney-title {
-    color: var(--color-gray);
+  color: var(--color-gray);
 }
 
 .memorial-note {
-    margin-top: var(--space-3xl);
-    padding-top: var(--space-2xl);
-    border-top: 1px solid var(--color-gray-light);
-    text-align: center;
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-2xl);
+  border-top: 1px solid var(--color-gray-light);
+  text-align: center;
 }
 
 .memorial-note p {
-    font-family: var(--font-serif);
-    font-size: var(--text-lg);
-    font-style: italic;
-    color: var(--color-gray-dark);
-    max-width: 640px;
-    margin: 0 auto;
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--color-gray-dark);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.memorial-note h2 {
+  font-size: var(--text-2xl);
+  color: var(--color-navy);
+  margin-bottom: var(--space-md);
+}
+
+.memorial-section {
+  margin-top: var(--space-4xl);
+}
+
+/* Attorney Group Titles */
+.attorney-group {
+  margin-bottom: var(--space-3xl);
+}
+
+.group-title {
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-navy);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--color-gold);
+  display: inline-block;
+}
+
+/* Attorney Card Links */
+.attorney-card--link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.attorney-card--link:hover {
+  transform: translateY(-2px);
+}
+
+.attorney-arrow {
+  font-size: var(--text-xl);
+  color: var(--color-gold);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all var(--transition-base);
+}
+
+.attorney-card--link:hover .attorney-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.attorney-focus {
+  font-size: var(--text-xs);
+  color: var(--color-gray);
+  margin-top: var(--space-xs);
+  letter-spacing: 0.02em;
+}
+
+.attorneys-grid--full {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: none;
+}
+
+/* ============================================
+   Attorney Profile Page
+   ============================================ */
+.page-header--attorney {
+  padding-bottom: var(--space-2xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header--attorney h1 {
+  position: relative;
+  display: inline-block;
+}
+
+.page-header--attorney h1::before {
+  content: attr(data-initial);
+  font-family: var(--font-script);
+  font-size: 12rem;
+  font-weight: 400;
+  color: var(--color-gold);
+  opacity: 0.22;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.page-header--attorney h1 span {
+  position: relative;
+  z-index: 1;
+}
+
+.attorney-profile {
+  background-color: var(--color-white);
+}
+
+.attorney-content {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-4xl);
+  align-items: start;
+}
+
+.attorney-main {
+  max-width: 760px;
+  background-color: var(--color-cream);
+  padding: var(--space-3xl);
+}
+
+.attorney-intro {
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  border-bottom: 1px solid var(--color-gray-light);
+}
+
+.attorney-bio {
+  margin-bottom: var(--space-3xl);
+}
+
+.attorney-bio p {
+  margin-bottom: var(--space-lg);
+}
+
+.attorney-bio h2 {
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+}
+
+.attorney-credentials {
+  padding-top: var(--space-2xl);
+  border-top: 1px solid var(--color-gray-light);
+}
+
+.credential-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.credential-section:last-child {
+  margin-bottom: 0;
+}
+
+.credential-section h2 {
+  font-size: var(--text-lg);
+  color: var(--color-navy);
+  margin-bottom: var(--space-md);
+  font-weight: 500;
+}
+
+.credential-list {
+  list-style: none;
+}
+
+.credential-list li {
+  position: relative;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  font-size: var(--text-base);
+  color: var(--color-charcoal);
+}
+
+.credential-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  background-color: var(--color-gold);
+  border-radius: 50%;
+}
+
+.credential-list--education li {
+  margin-bottom: var(--space-md);
+}
+
+.credential-list--education strong {
+  display: block;
+  color: var(--color-navy);
+  font-weight: 500;
+}
+
+.credential-list--education span {
+  font-size: var(--text-sm);
+  color: var(--color-gray-dark);
+}
+
+/* Attorney Sidebar */
+.attorney-sidebar {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-xl));
+}
+
+.attorney-sidebar .sidebar-card {
+  margin-bottom: var(--space-lg);
+}
+
+.sidebar-contact {
+  margin-bottom: var(--space-xl);
+}
+
+.sidebar-contact p {
+  margin-bottom: var(--space-md);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.sidebar-contact strong {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-xs);
+}
+
+.sidebar-contact a {
+  color: var(--color-white);
+  transition: color var(--transition-fast);
+}
+
+.sidebar-contact a:hover {
+  color: var(--color-gold-light);
+}
+
+.related-attorneys {
+  padding: var(--space-xl);
+  background-color: var(--color-cream);
+}
+
+.related-attorneys h3 {
+  font-size: var(--text-lg);
+  color: var(--color-navy);
+  margin-bottom: var(--space-lg);
+}
+
+.related-attorneys ul li {
+  margin-bottom: var(--space-sm);
+}
+
+.related-attorneys a {
+  font-size: var(--text-sm);
+  color: var(--color-charcoal);
+  transition: color var(--transition-fast);
+}
+
+.related-attorneys a:hover {
+  color: var(--color-gold-muted);
 }
 
 /* ============================================
    Our Story Page
    ============================================ */
 .story-content-full {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .story-content-full p {
-    font-size: var(--text-lg);
-    line-height: 1.8;
-    margin-bottom: var(--space-xl);
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  margin-bottom: var(--space-xl);
 }
 
 .story-content-full h2 {
-    font-size: var(--text-3xl);
-    margin-top: var(--space-3xl);
-    margin-bottom: var(--space-lg);
+  font-size: var(--text-3xl);
+  margin-top: var(--space-3xl);
+  margin-bottom: var(--space-lg);
 }
 
 .story-highlight {
-    padding: var(--space-2xl);
-    background-color: var(--color-navy);
-    color: var(--color-white);
-    margin: var(--space-3xl) 0;
+  padding: var(--space-2xl);
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  margin: var(--space-3xl) 0;
 }
 
 .story-highlight p {
-    font-family: var(--font-serif);
-    font-size: var(--text-2xl);
-    font-weight: 500;
-    line-height: 1.5;
-    margin: 0;
-    color: var(--color-white);
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--color-white);
 }
 
 /* ============================================
@@ -1191,250 +1456,288 @@ p:last-child {
 
 /* Tablet */
 @media (max-width: 1024px) {
-    :root {
-        --text-5xl: 2.75rem;
-        --text-4xl: 2.25rem;
-        --space-5xl: 5rem;
-    }
-    
-    .hero {
-        min-height: 75vh;
-    }
-    
-    .story-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-2xl);
-    }
-    
-    .story-values {
-        max-width: 500px;
-    }
-    
-    .practice-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-md);
-    }
-    
-    .practice-card {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-template-rows: auto auto auto;
-        gap: var(--space-sm) var(--space-xl);
-    }
-    
-    .practice-number {
-        grid-row: 1 / 2;
-        margin-bottom: 0;
-    }
-    
-    .practice-card h3 {
-        grid-column: 2;
-        margin-bottom: 0;
-    }
-    
-    .practice-card > p {
-        grid-column: 2;
-    }
-    
-    .practice-link {
-        grid-column: 2;
-    }
-    
-    .attorneys-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-2xl);
-    }
-    
-    .practice-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .practice-sidebar {
-        position: static;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-lg);
-    }
-    
-    .footer-main {
-        grid-template-columns: 1fr;
-        gap: var(--space-2xl);
-    }
+  :root {
+    --text-5xl: 2.75rem;
+    --text-4xl: 2.25rem;
+    --space-5xl: 5rem;
+  }
+
+  .hero {
+    min-height: 75vh;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .story-values {
+    max-width: 500px;
+  }
+
+  .practice-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .practice-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+    gap: var(--space-sm) var(--space-xl);
+  }
+
+  .practice-number {
+    grid-row: 1 / 2;
+    margin-bottom: 0;
+  }
+
+  .practice-card h3 {
+    grid-column: 2;
+    margin-bottom: 0;
+  }
+
+  .practice-card > p {
+    grid-column: 2;
+  }
+
+  .practice-link {
+    grid-column: 2;
+  }
+
+  .attorneys-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .practice-content {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+
+  .attorney-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .attorney-main {
+    padding: var(--space-xl);
+  }
+
+  .attorney-sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+
+  .attorneys-grid--full {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-    :root {
-        --text-5xl: 2.25rem;
-        --text-4xl: 1.875rem;
-        --text-3xl: 1.5rem;
-        --space-5xl: 4rem;
-        --space-4xl: 3rem;
-        --header-height: 68px;
-    }
-    
-    .container {
-        padding: 0 var(--space-lg);
-    }
-    
-    /* Mobile Navigation */
-    .mobile-menu-toggle {
-        display: flex;
-    }
-    
-    .main-nav {
-        position: fixed;
-        top: var(--header-height);
-        left: 0;
-        right: 0;
-        background-color: var(--color-navy-deep);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding: var(--space-xl);
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-        transition: transform var(--transition-base), opacity var(--transition-base), visibility var(--transition-base);
-    }
-    
-    .main-nav.is-open {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    .nav-list {
-        flex-direction: column;
-        gap: var(--space-lg);
-        align-items: flex-start;
-    }
-    
-    .nav-list a {
-        font-size: var(--text-base);
-    }
-    
-    .nav-cta {
-        margin-top: var(--space-sm);
-    }
-    
-    /* Hero */
-    .hero {
-        min-height: 90vh;
-    }
-    
-    .hero-content .container {
-        padding-left: var(--space-lg);
-        padding-right: var(--space-lg);
-    }
-    
-    .hero-cta {
-        flex-direction: column;
-    }
-    
-    .hero-cta .btn {
-        width: 100%;
-    }
-    
-    /* Practice Cards */
-    .practice-card {
-        display: block;
-    }
-    
-    .practice-number {
-        margin-bottom: var(--space-md);
-    }
-    
-    /* Attorneys Grid */
-    .attorneys-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-md);
-    }
-    
-    .attorney-card {
-        padding: var(--space-lg);
-    }
-    
-    .attorney-info h3 {
-        font-size: var(--text-base);
-    }
-    
-    /* Form */
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-    
-    /* Sidebar */
-    .practice-sidebar {
-        grid-template-columns: 1fr;
-    }
-    
-    /* Footer */
-    .footer-nav {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-xl);
-    }
-    
-    .footer-bottom {
-        flex-direction: column;
-        gap: var(--space-md);
-        text-align: center;
-    }
+  :root {
+    --text-5xl: 2.25rem;
+    --text-4xl: 1.875rem;
+    --text-3xl: 1.5rem;
+    --space-5xl: 4rem;
+    --space-4xl: 3rem;
+    --header-height: 68px;
+  }
+
+  .container {
+    padding: 0 var(--space-lg);
+  }
+
+  /* Mobile Navigation */
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--color-navy-deep);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--space-xl);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform var(--transition-base), opacity var(--transition-base), visibility var(--transition-base);
+  }
+
+  .main-nav.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: var(--space-lg);
+    align-items: flex-start;
+  }
+
+  .nav-list a {
+    font-size: var(--text-base);
+  }
+
+  .nav-cta {
+    margin-top: var(--space-sm);
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero-content .container {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+
+  .hero-cta {
+    flex-direction: column;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+  }
+
+  /* Practice Cards */
+  .practice-card {
+    display: block;
+  }
+
+  .practice-number {
+    margin-bottom: var(--space-md);
+  }
+
+  /* Attorneys Grid */
+  .attorneys-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .attorney-card {
+    padding: var(--space-lg);
+  }
+
+  .attorney-info h3 {
+    font-size: var(--text-base);
+  }
+
+  .page-header--attorney h1::before {
+    font-size: 8rem;
+  }
+
+  /* Form */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Sidebar */
+  .practice-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .attorney-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .attorneys-grid--full {
+    grid-template-columns: 1fr;
+  }
+
+  .attorney-main {
+    padding: var(--space-lg);
+  }
+
+  /* Footer */
+  .footer-nav {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
 }
 
 /* Small Mobile */
 @media (max-width: 480px) {
-    :root {
-        --text-5xl: 1.875rem;
-        --text-4xl: 1.625rem;
-    }
-    
-    .attorneys-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-nav {
-        grid-template-columns: 1fr;
-    }
+  :root {
+    --text-5xl: 1.875rem;
+    --text-4xl: 1.625rem;
+  }
+
+  .attorneys-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-nav {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ============================================
    Accessibility
    ============================================ */
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-    
-    html {
-        scroll-behavior: auto;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 /* Focus Styles */
 :focus-visible {
-    outline: 2px solid var(--color-gold);
-    outline-offset: 2px;
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
 }
 
 /* Skip Link */
 .skip-link {
-    position: absolute;
-    top: -50px;
-    left: var(--space-lg);
-    background: var(--color-gold);
-    color: var(--color-navy-deep);
-    padding: var(--space-sm) var(--space-lg);
-    font-weight: 600;
-    z-index: 9999;
-    transition: top var(--transition-fast);
-    border-radius: 0 0 4px 4px;
+  position: absolute;
+  top: -50px;
+  left: var(--space-lg);
+  background: var(--color-gold);
+  color: var(--color-navy-deep);
+  padding: var(--space-sm) var(--space-lg);
+  font-weight: 600;
+  z-index: 9999;
+  transition: top var(--transition-fast);
+  border-radius: 0 0 4px 4px;
 }
 
 .skip-link:focus {
-    top: 0;
+  top: 0;
 }
