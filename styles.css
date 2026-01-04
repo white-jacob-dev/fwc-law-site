@@ -2538,6 +2538,11 @@ a.footer-brand:hover {
     --space-5xl: 5rem;
   }
 
+  /* Hide header contact on tablet */
+  .header-contact {
+    display: none;
+  }
+
   .hero {
     min-height: 75vh;
   }
@@ -2662,6 +2667,26 @@ a.footer-brand:hover {
   /* Mobile Navigation */
   .mobile-menu-toggle {
     display: flex;
+  }
+
+  /* Hide header contact info on mobile */
+  .header-contact {
+    display: none;
+  }
+
+  .header-right {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Smaller logo on mobile */
+  .logo-text {
+    font-size: var(--text-lg);
+  }
+
+  .logo-suffix {
+    font-size: 0.65rem;
+    max-width: 160px;
   }
 
   .main-nav {
