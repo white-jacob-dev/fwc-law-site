@@ -133,7 +133,7 @@
   function initScrollAnimations() {
     const observerOptions = {
       root: null,
-      rootMargin: '0px',
+      rootMargin: '0px 0px -50px 0px',
       threshold: 0.1,
     };
 
@@ -145,11 +145,45 @@
       });
     }, observerOptions);
 
-    // Observe practice cards and attorney cards
-    document.querySelectorAll('.practice-card, .attorney-card, .value-item').forEach((el) => {
+    // Observe practice cards with staggered delays
+    document.querySelectorAll('.practice-card').forEach((el, index) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = `opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.1}s, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.1}s`;
+      observer.observe(el);
+    });
+
+    // Observe attorney cards with staggered delays (reset per group)
+    document.querySelectorAll('.attorney-group').forEach((group) => {
+      group.querySelectorAll('.attorney-card').forEach((el, index) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(25px)';
+        el.style.transition = `opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.08}s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.08}s`;
+        observer.observe(el);
+      });
+    });
+
+    // For attorney cards not in groups (homepage preview)
+    document.querySelectorAll('.attorneys-preview .attorney-card').forEach((el, index) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(25px)';
+      el.style.transition = `opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.1}s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.1}s`;
+      observer.observe(el);
+    });
+
+    // Observe value items with staggered delays
+    document.querySelectorAll('.value-item').forEach((el, index) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateX(-20px)';
+      el.style.transition = `opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.15}s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.15}s`;
+      observer.observe(el);
+    });
+
+    // Observe section headers
+    document.querySelectorAll('.section-header, .story-content, .contact-info').forEach((el) => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
-      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      el.style.transition = 'opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)';
       observer.observe(el);
     });
   }
@@ -160,11 +194,11 @@
   function addVisibleStyles() {
     const style = document.createElement('style');
     style.textContent = `
-            .is-visible {
-                opacity: 1 !important;
-                transform: translateY(0) !important;
-            }
-        `;
+      .is-visible {
+        opacity: 1 !important;
+        transform: translateY(0) translateX(0) !important;
+      }
+    `;
     document.head.appendChild(style);
   }
 
