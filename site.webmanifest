@@ -1,0 +1,22 @@
+{
+  "name": "Ferguson Widmayer & Clark PC",
+  "short_name": "FWC Law",
+  "icons": [
+    {
+      "src": "favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#122340",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "Ferguson Widmayer & Clark PC provides estate planning, probate, business law, and legacy planning services in Ann Arbor, Michigan."
+}
+

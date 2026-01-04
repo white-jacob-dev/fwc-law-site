@@ -1,0 +1,13 @@
+# Robots.txt for Ferguson Widmayer & Clark PC
+# https://fergusonwidmayer.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://fergusonwidmayer.com/sitemap.xml
+
+# Disallow access to any admin or private directories (if applicable)
+# Disallow: /admin/
+# Disallow: /private/
+

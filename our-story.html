@@ -5,19 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Our Story - Learn about Ferguson Widmayer & Clark PC's history and commitment to serving Ann Arbor, Michigan.">
     <title>Our Story | Ferguson Widmayer & Clark PC</title>
-
-    <!-- Open Graph / Social Media Preview -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Our Story | Ferguson Widmayer & Clark PC" />
-    <meta property="og:description" content="Serving Ann Arbor families and businesses with trusted legal counsel since 1975." />
-    <meta property="og:image" content="https://white-jacob-dev.github.io/fwc-law-site/images/hero.jpg" />
-    <meta property="og:url" content="https://white-jacob-dev.github.io/fwc-law-site/our-story.html" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://fergusonwidmayer.com/our-story.html">
     
+    <!-- Open Graph -->
+    <meta property="og:title" content="Our Story | Ferguson Widmayer & Clark PC">
+    <meta property="og:description" content="Learn about our firm's history, commitment to clients, and our historic 1896 office in Ann Arbor, Michigan.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fergusonwidmayer.com/our-story.html">
+    <meta property="og:site_name" content="Ferguson Widmayer & Clark PC">
+    <meta property="og:image" content="https://white-jacob-dev.github.io/fwc-law-site/images/house.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://white-jacob-dev.github.io/fwc-law-site/images/house.jpg">
+    <meta name="twitter:title" content="Our Story | Ferguson Widmayer & Clark PC">
+    <meta name="twitter:description" content="Learn about our firm's history and commitment to serving Ann Arbor, Michigan.">
+    
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fergusonwidmayer.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our Story",
+          "item": "https://fergusonwidmayer.com/our-story.html"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#122340">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Libre+Franklin:wght@300;400;500;600&family=Mea+Culpa&family=Pinyon+Script&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -26,9 +62,9 @@
     
     <header class="site-header">
         <div class="container">
-            <a href="index.html" class="logo" aria-label="Ferguson Widmayer & Clark Home">
+            <a href="index.html" class="logo logo--interior" aria-label="Ferguson Widmayer & Clark Home">
                 <span class="logo-text">Ferguson Widmayer <span class="logo-ampersand">&</span> Clark</span>
-                <span class="logo-suffix">Attorneys & Legal Counsel</span>
+                <span class="logo-suffix">Estates, Trusts, Business, and Legacy Planning</span>
             </a>
             
             <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -37,14 +73,18 @@
                 <span class="menu-bar"></span>
             </button>
             
-            <nav class="main-nav" role="navigation" aria-label="Main navigation">
-                <ul class="nav-list">
-                    <li><a href="practice-areas.html">Practice Areas</a></li>
-                    <li><a href="attorneys.html">Attorneys</a></li>
-                    <li><a href="our-story.html" class="active">Our Story</a></li>
-                    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="header-right">
+                <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="practice-areas.html">Practice Areas</a></li>
+                        <li><a href="attorneys.html">Attorneys</a></li>
+                        <li><a href="our-story.html" class="active">Our Story</a></li>
+                        <li><a href="faq.html" class="nav-faq">FAQ</a></li>
+                        <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-contact"><a href="https://maps.google.com/?q=538+North+Division+Street,+Ann+Arbor,+MI+48104" target="_blank" rel="noopener noreferrer" class="header-address">538 N. Division St., Ann Arbor, MI 48104<span class="sr-only"> (opens in new tab)</span></a> · <a href="tel:+17346620222">(734) 662-0222</a></div>
+            </div>
         </div>
     </header>
 
@@ -66,36 +106,79 @@
         </section>
 
         <!-- Our Story Content -->
-        <section class="section practice-detail">
+        <div class="story-section-navy">
+            <div class="container-narrow" style="max-width: 960px; margin-left: auto; margin-right: auto;">
+                <div class="building-feature" style="align-items: start; margin: 0 0 2rem 0;">
+                    <div class="building-image" style="max-width: 420px;">
+                        <img src="images/10.jpg" alt="Ferguson Widmayer & Clark PC law firm sign at historic 1896 Henry Cornwell House, Ann Arbor, Michigan" loading="lazy">
+                    </div>
+                    <div class="building-feature-text">
+                        <h3>An Historic Home for Legal Excellence</h3>
+                        <p>Our firm was founded on a simple principle: that exceptional legal counsel begins with genuinely understanding each client's unique circumstances, goals, and concerns. This philosophy has guided us through generations of practice and remains at the heart of everything we do.</p>
+                        <p>At Ferguson Widmayer & Clark PC, we combine deep legal expertise with a genuine commitment to building lasting relationships with our clients. We don't believe in one-size-fits-all solutions. Instead, we take the time to understand the complete picture—your family dynamics, financial situation, business interests, and personal goals—to develop strategies that truly serve your needs.</p>
+                        <p>Our attorneys bring decades of combined experience across estate planning, business law, and probate matters. This breadth of knowledge allows us to provide comprehensive counsel that addresses all aspects of our clients' legal needs, often anticipating issues before they arise.</p>
+                    </div>
+                </div>
+                
+                <div class="story-quote-box">
+                    <p>"We believe that effective representation begins with listening—taking the time to fully comprehend your goals, concerns, and the nuances of your situation."</p>
+                </div>
+            </div>
+        </div>
+                
+        <section class="section practice-detail" style="padding-top: var(--space-xl); padding-bottom: var(--space-xl);">
+            <div class="container">
+                <div class="story-commitment-box">
+                    <div class="commitment-content" style="display: flex; align-items: start; gap: 2rem;">
+                        <div style="flex: 1;">
+                            <h2 style="margin-top: 0; margin-bottom: 0.75rem; margin-left: 1.25rem;">Our Commitment</h2>
+                            <ul style="margin: 0; padding-left: 1.25rem;">
+                                <li><strong>Discretion:</strong> Your matters are handled with the utmost confidentiality and care.</li>
+                                <li><strong>Experience:</strong> Decades of practice across estate planning, business, and probate law.</li>
+                                <li><strong>Dedication:</strong> Personalized attention to every client, every matter.</li>
+                                <li><strong>Integrity:</strong> Honest, straightforward advice you can trust.</li>
+                            </ul>
+                        </div>
+                        <div class="building-image" style="max-width: 150px; flex-shrink: 0;">
+                            <img src="images/3.jpg" alt="Historic Victorian interior with original woodwork at Ferguson Widmayer & Clark PC law office" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="story-section-navy">
+            <div class="container-narrow" style="max-width: 960px; margin-left: auto; margin-right: auto;">
+                <div class="building-feature" style="align-items: center; margin: 0;">
+                    <div class="building-feature-text">
+                        <h3>The Henry Cornwell House</h3>
+                        <p class="story-subtitle">Built in 1896</p>
+                        <p>Our offices are located at 538 North Division Street in Ann Arbor, in an historic 1896 Victorian home that reflects our firm's commitment to tradition, quality, and enduring service. The beautifully preserved architecture features elegant woodwork, ornate staircases, and period details that speak to our appreciation for craftsmanship and lasting quality.</p>
+                        <p>The home was built by Henry Cornwell, who along with his brother Harvey, owned a paper mill on the Huron River near the Barton Dam. The Queen Anne/Colonial Revival house replaced an earlier Italianate house, which had stood on the same site. The 17-room house was one of several homes highlighted in the 1896 <em>Ann Arbor Headlight</em>. After Henry died, his son Frank and his family remained in the home until World War I, when it became too large for the family. It went through several subsequent owners including the Beth Israel Congregation, the Pentecostal Church of God, St. Thomas Church, and several private owners and businesses. Ferguson Widmayer & Clark has occupied the building since 1998.</p>
+                        <p class="story-source-citation">Source: Historic Buildings, Ann Arbor, MI by Marjorie Reade and Susan Wineberg, copyright 1982.</p>
+                    </div>
+                    <div class="building-image" style="max-width: 500px;">
+                        <img src="images/house.jpg" alt="Henry Cornwell House built in 1896, home of Ferguson Widmayer & Clark PC estate planning attorneys in Ann Arbor" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section class="section" style="padding-top: var(--space-xl);">
             <div class="container">
                 <div class="story-content-full">
-                    <p class="lead">For decades, Ferguson Widmayer & Clark PC has been a cornerstone of the Ann Arbor legal community, providing thoughtful, personalized legal services to individuals, families, and businesses throughout Michigan.</p>
-                    
-                    <p>Our firm was founded on a simple principle: that exceptional legal counsel begins with genuinely understanding each client's unique circumstances, goals, and concerns. This philosophy has guided us through generations of practice and remains at the heart of everything we do.</p>
-                    
-                    <div class="story-highlight">
-                        <p>"We believe that effective representation begins with listening—taking the time to fully comprehend your goals, concerns, and the nuances of your situation."</p>
+                    <div class="story-photos-box">
+                        <div class="story-photos-container">
+                            <div class="building-image" style="flex: 1; overflow: hidden; display: flex;">
+                                <img src="images/6.jpg" alt="Ornate Victorian wooden staircase with hand-carved banisters at Ferguson Widmayer & Clark PC" style="width: 100%; object-fit: cover; object-position: bottom;" loading="lazy">
+                            </div>
+                            <div class="building-image" style="flex: 1;">
+                                <img src="images/11.jpg" alt="View through the historic stairwell at Ferguson Widmayer & Clark PC law firm in Ann Arbor" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                            </div>
+                        </div>
                     </div>
                     
-                    <h2>Our Approach</h2>
-                    <p>At Ferguson Widmayer & Clark PC, we combine deep legal expertise with a genuine commitment to building lasting relationships with our clients. We don't believe in one-size-fits-all solutions. Instead, we take the time to understand the complete picture—your family dynamics, financial situation, business interests, and personal goals—to develop strategies that truly serve your needs.</p>
-                    
-                    <p>Our attorneys bring decades of combined experience across estate planning, business law, and probate matters. This breadth of knowledge allows us to provide comprehensive counsel that addresses all aspects of our clients' legal needs, often anticipating issues before they arise.</p>
-                    
-                    <h2>Our Commitment</h2>
-                    <p>We are committed to providing our clients with:</p>
-                    
-                    <ul>
-                        <li><strong>Discretion:</strong> Your matters are handled with the utmost confidentiality and care.</li>
-                        <li><strong>Experience:</strong> Decades of practice across estate planning, business, and probate law.</li>
-                        <li><strong>Dedication:</strong> Personalized attention to every client, every matter.</li>
-                        <li><strong>Integrity:</strong> Honest, straightforward advice you can trust.</li>
-                    </ul>
-                    
-                    <h2>Our Home</h2>
-                    <p>Our offices are located at 538 North Division Street in Ann Arbor, in a historic building that reflects our firm's commitment to tradition, quality, and enduring service. We welcome you to visit and discover why generations of Michigan families and businesses have trusted Ferguson Widmayer & Clark PC with their most important legal matters.</p>
-                    
-                    <p>We honor the memory of our founding partners, Larry Ferguson and Walter B. Ranney, whose vision and dedication established the foundation upon which our firm continues to build.</p>
+                    <p class="story-memorial-text">We honor the memory of our founding partners, Larry Ferguson and Walter B. Ranney, whose vision and dedication established the foundation upon which our firm continues to build.</p>
                 </div>
             </div>
         </section>
@@ -119,11 +202,11 @@
         <div class="container">
             <div class="footer-main">
                 <div class="footer-content">
-                    <div class="footer-brand">
+                    <a href="index.html" class="footer-brand">
                         <span class="logo-text">Ferguson Widmayer <span class="logo-ampersand">&</span> Clark</span>
-                        <span class="logo-suffix">Attorneys & Legal Counsel</span>
+                        <span class="logo-suffix">Estates, Trusts, Business, and Legacy Planning</span>
                         <p class="footer-tagline">Trusted legal counsel in Ann Arbor, Michigan</p>
-                    </div>
+                    </a>
                     <nav class="footer-nav" aria-label="Footer navigation">
                         <div class="footer-nav-group">
                             <h4>Navigation</h4>
@@ -131,47 +214,47 @@
                                 <li><a href="practice-areas.html">Practice Areas</a></li>
                                 <li><a href="attorneys.html">Attorneys</a></li>
                                 <li><a href="our-story.html">Our Story</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
                                 <li><a href="index.html#contact">Contact</a></li>
                             </ul>
                         </div>
-                        <div class="footer-nav-group">
+                        <div class="footer-nav-group footer-nav-group--wide">
                             <h4>Practice Areas</h4>
-                            <ul>
+                            <ul class="practice-areas-list">
                                 <li><a href="estate-planning.html">Estate Planning</a></li>
-                                <li><a href="business-law.html">Business Law</a></li>
-                                <li><a href="probate.html">Probate</a></li>
+                                <li><a href="probate.html">Probate & Trust Administration</a></li>
+                                <li><a href="advanced-wealth-tax-planning.html">Advanced Wealth & Tax Planning</a></li>
+                                <li><a href="business-law.html">Real Estate, Business & Tax Law</a></li>
+                                <li><a href="adoptions.html">Adoptions & Name Changes</a></li>
+                                <li><a href="prenuptial-agreements.html">Prenuptial Agreements</a></li>
+                                <li><a href="elder-law.html">Elder Law</a></li>
                             </ul>
                         </div>
                         <div class="footer-nav-group">
                             <h4>Contact</h4>
                             <ul>
                                 <li><a href="tel:+17346620222">(734) 662-0222</a></li>
-                                <li>538 North Division Street</li>
-                                <li>Ann Arbor, MI 48104</li>
+<li><a href="https://maps.google.com/?q=538+North+Division+Street,+Ann+Arbor,+MI+48104" target="_blank" rel="noopener noreferrer" class="address-link">538 North Division Street<br>Ann Arbor, MI 48104<span class="sr-only"> (opens in new tab)</span></a></li>
                             </ul>
                         </div>
                     </nav>
                 </div>
                 <div class="footer-map-wrapper">
-                    <a href="https://maps.google.com/?q=538+North+Division+Street,+Ann+Arbor,+MI+48104" target="_blank" rel="noopener noreferrer" class="footer-map-link" aria-label="Open address in Google Maps">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.8876!2d-83.7496!3d42.2856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883cae3a79f1e2a7%3A0x8d0c5e5c0b5f5b5a!2s538%20N%20Division%20St%2C%20Ann%20Arbor%2C%20MI%2048104!5e0!3m2!1sen!2sus!4v1703800000000!5m2!1sen!2sus"
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Ferguson Widmayer & Clark location map">
-                        </iframe>
+                    <a href="https://maps.google.com/?q=538+North+Division+Street,+Ann+Arbor,+MI+48104" target="_blank" rel="noopener noreferrer" class="footer-map-link" aria-label="Open address in Google Maps (opens in new tab)">
+                        <img src="images/ann-arbor-map.png" alt="Map showing Ferguson Widmayer & Clark location at 538 North Division Street, Ann Arbor, Michigan" class="footer-map-image" loading="lazy">
                         <div class="map-overlay">
                             <span class="map-cta">Open in Maps</span>
                         </div>
                     </a>
+                    <a href="https://maps.google.com/?q=538+North+Division+Street,+Ann+Arbor,+MI+48104" target="_blank" rel="noopener noreferrer" class="footer-map-btn">Open in Maps<span class="sr-only"> (opens in new tab)</span></a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="copyright">© 2025 Ferguson Widmayer & Clark. All rights reserved.</p>
+                <p class="copyright">© 2026 Ferguson Widmayer & Clark. All rights reserved | <a href="attorney-mara-kent.html" class="web-design-link">Web Design: Mara Kent</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+                <div class="footer-buttons">
+                    <a href="#" class="btn btn-primary btn-sm">Client Portal</a>
+                    <a href="#" class="btn btn-primary btn-sm">Make a Payment</a>
+                </div>
             </div>
         </div>
     </footer>

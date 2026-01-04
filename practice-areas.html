@@ -3,21 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Practice Areas - Ferguson Widmayer & Clark PC offers estate planning, business law, and probate services in Ann Arbor, Michigan.">
+    <meta name="description" content="Practice Areas - Ferguson Widmayer & Clark PC offers estate planning, probate, business law, elder law, and more in Ann Arbor, Michigan.">
     <title>Practice Areas | Ferguson Widmayer & Clark PC</title>
-
-    <!-- Open Graph / Social Media Preview -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Practice Areas | Ferguson Widmayer & Clark PC" />
-    <meta property="og:description" content="Estate planning, business law, and probate services in Ann Arbor, Michigan." />
-    <meta property="og:image" content="https://white-jacob-dev.github.io/fwc-law-site/images/hero.jpg" />
-    <meta property="og:url" content="https://white-jacob-dev.github.io/fwc-law-site/practice-areas.html" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://fergusonwidmayer.com/practice-areas.html">
     
+    <!-- Open Graph -->
+    <meta property="og:title" content="Practice Areas | Ferguson Widmayer & Clark PC">
+    <meta property="og:description" content="Comprehensive legal services in Ann Arbor, Michigan including estate planning, probate, trust administration, business law, adoptions, and elder law.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fergusonwidmayer.com/practice-areas.html">
+    <meta property="og:site_name" content="Ferguson Widmayer & Clark PC">
+    <meta property="og:image" content="https://white-jacob-dev.github.io/fwc-law-site/images/house.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://white-jacob-dev.github.io/fwc-law-site/images/house.jpg">
+    <meta name="twitter:title" content="Practice Areas | Ferguson Widmayer & Clark PC">
+    <meta name="twitter:description" content="Estate planning, probate, business law, elder law, and more in Ann Arbor, Michigan.">
+    
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fergusonwidmayer.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Practice Areas",
+          "item": "https://fergusonwidmayer.com/practice-areas.html"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#122340">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Libre+Franklin:wght@300;400;500;600&family=Mea+Culpa&family=Pinyon+Script&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -26,9 +62,9 @@
     
     <header class="site-header">
         <div class="container">
-            <a href="index.html" class="logo" aria-label="Ferguson Widmayer & Clark Home">
+            <a href="index.html" class="logo logo--interior" aria-label="Ferguson Widmayer & Clark Home">
                 <span class="logo-text">Ferguson Widmayer <span class="logo-ampersand">&</span> Clark</span>
-                <span class="logo-suffix">Attorneys & Legal Counsel</span>
+                <span class="logo-suffix">Estates, Trusts, Business, and Legacy Planning</span>
             </a>
             
             <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -37,14 +73,18 @@
                 <span class="menu-bar"></span>
             </button>
             
-            <nav class="main-nav" role="navigation" aria-label="Main navigation">
-                <ul class="nav-list">
-                    <li><a href="practice-areas.html" class="active">Practice Areas</a></li>
-                    <li><a href="attorneys.html">Attorneys</a></li>
-                    <li><a href="our-story.html">Our Story</a></li>
-                    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="header-right">
+                <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="practice-areas.html" class="active">Practice Areas</a></li>
+                        <li><a href="attorneys.html">Attorneys</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="faq.html" class="nav-faq">FAQ</a></li>
+                        <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-contact"><a href="https://maps.google.com/?q=538+North+Division+Street,+Ann+Arbor,+MI+48104" target="_blank" rel="noopener noreferrer" class="header-address">538 N. Division St., Ann Arbor, MI 48104<span class="sr-only"> (opens in new tab)</span></a> · <a href="tel:+17346620222">(734) 662-0222</a></div>
+            </div>
         </div>
     </header>
 
@@ -61,32 +101,134 @@
                 </nav>
                 <span class="section-label">What We Do</span>
                 <h1>Practice Areas</h1>
-                <p>Our attorneys provide comprehensive legal services across estate planning, business law, and probate matters.</p>
+                <p>Our attorneys provide comprehensive legal services across the following areas of law:</p>
+                <nav class="practice-areas-nav" aria-label="Practice areas quick links">
+                    <a href="estate-planning.html">Estate Planning</a>
+                    <span class="dot" aria-hidden="true">·</span>
+                    <a href="probate.html">Probate & Trust Administration</a>
+                    <span class="dot" aria-hidden="true">·</span>
+                    <a href="advanced-wealth-tax-planning.html">Advanced Wealth & Tax Planning</a>
+                    <span class="dot" aria-hidden="true">·</span>
+                    <a href="business-law.html">Real Estate, Business & Tax Law</a>
+                    <span class="dot" aria-hidden="true">·</span>
+                    <a href="adoptions.html">Adoptions, Parental Confirmations & Name Changes</a>
+                    <span class="dot" aria-hidden="true">·</span>
+                    <a href="prenuptial-agreements.html">Prenuptial Agreements</a>
+                    <span class="dot" aria-hidden="true">·</span>
+                    <a href="elder-law.html">Elder Law</a>
+                </nav>
             </div>
         </section>
 
         <!-- Practice Areas Grid -->
         <section class="section practice-preview practice-preview--light">
             <div class="container">
-                <div class="practice-grid">
+                <div class="practice-grid practice-grid--full">
+                    <!-- 1. Estate Planning -->
                     <a href="estate-planning.html" class="practice-card">
-                        <h3>Estate Planning & Business Succession</h3>
-                        <p>Comprehensive planning to protect your assets and ensure your wishes are honored. We craft wills, trusts, powers of attorney, and succession strategies tailored to your family and business needs.</p>
-                        <span class="practice-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                        <div class="practice-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path d="M9 12h6M12 9v6M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                <path d="M12 3v2M12 19v2M3 12h2M19 12h2"/>
+                            </svg>
+                        </div>
+                        <h3>Estate Planning</h3>
+                        <p>Comprehensive planning to protect your assets and ensure your wishes are honored through wills, trusts, powers of attorney, and healthcare directives.</p>
+                        <span class="practice-link">Learn More<span class="sr-only"> about Estate Planning</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
                     </a>
                     
-                    <a href="business-law.html" class="practice-card">
-                        <h3>Employment & Business Law</h3>
-                        <p>Strategic counsel for businesses of all sizes. From formation and contracts to employment matters and disputes, we help you navigate the legal landscape with confidence.</p>
-                        <span class="practice-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                    </a>
-                    
+                    <!-- 2. Probate, Trust Administration, and Estate Settlement -->
                     <a href="probate.html" class="practice-card">
-                        <h3>Probate, Estate Settlement & Trust Administration</h3>
-                        <p>Guiding families through the estate settlement process with sensitivity and efficiency. We handle probate proceedings, trust administration, and estate litigation when necessary.</p>
-                        <span class="practice-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                        <div class="practice-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path d="M3 6l9-3 9 3M3 6v2c0 5.5 3.5 10 9 11 5.5-1 9-5.5 9-11V6M3 6l9 3 9-3"/>
+                                <path d="M12 12v5"/>
+                            </svg>
+                        </div>
+                        <h3>Probate, Trust Administration & Estate Settlement</h3>
+                        <p>Guiding families through the estate settlement process with sensitivity and efficiency, including probate proceedings and trust administration.</p>
+                        <span class="practice-link">Learn More<span class="sr-only"> about Probate, Trust Administration & Estate Settlement</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                    </a>
+                    
+                    <!-- 3. Advanced Wealth and Tax Planning -->
+                    <a href="advanced-wealth-tax-planning.html" class="practice-card">
+                        <div class="practice-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                            </svg>
+                        </div>
+                        <h3>Advanced Wealth & Tax Planning</h3>
+                        <p>Sophisticated strategies for wealth preservation, tax minimization, and multi-generational transfers using advanced trust structures and planning techniques.</p>
+                        <span class="practice-link">Learn More<span class="sr-only"> about Advanced Wealth & Tax Planning</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                    </a>
+                    
+                    <!-- 4. Real Estate, Business, and Tax Law -->
+                    <a href="business-law.html" class="practice-card">
+                        <div class="practice-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <h3>Real Estate, Business & Tax Law</h3>
+                        <p>Comprehensive legal services for property transactions, business formation, contracts, and tax planning for individuals and businesses.</p>
+                        <span class="practice-link">Learn More<span class="sr-only"> about Real Estate, Business & Tax Law</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                    </a>
+                    
+                    <!-- 5. Adoptions, Parental Confirmations, and Name Changes -->
+                    <a href="adoptions.html" class="practice-card">
+                        <div class="practice-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                            </svg>
+                        </div>
+                        <h3>Adoptions, Parental Confirmations & Name Changes</h3>
+                        <p>Helping families navigate the legal process of building and defining their families through adoptions, parental confirmations, and name change proceedings.</p>
+                        <span class="practice-link">Learn More<span class="sr-only"> about Adoptions, Parental Confirmations & Name Changes</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                    </a>
+                    
+                    <!-- 6. Prenuptial Agreements -->
+                    <a href="prenuptial-agreements.html" class="practice-card">
+                        <div class="practice-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+                            </svg>
+                        </div>
+                        <h3>Prenuptial Agreements</h3>
+                        <p>Thoughtful planning to protect both partners through fair, enforceable prenuptial and postnuptial agreements that provide clarity and peace of mind.</p>
+                        <span class="practice-link">Learn More<span class="sr-only"> about Prenuptial Agreements</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
                     </a>
                 </div>
+                
+                <!-- Elder Law Row with Oval Windows -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-top: 2rem; align-items: center;">
+                    <div style="display: flex; justify-content: center;">
+                        <div class="building-image building-image--ultra-thin" style="max-width: 180px;">
+                            <img src="images/window.jpg" alt="Historic stained glass window at Ferguson Widmayer & Clark PC estate planning law firm in Ann Arbor" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <!-- 7. Elder Law -->
+                    <a href="elder-law.html" class="practice-card">
+                        <div class="practice-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                            </svg>
+                        </div>
+                        <h3>Elder Law</h3>
+                        <p>Protecting seniors and their families through long-term care planning, Medicaid planning, guardianship, and advocacy against elder abuse and exploitation.</p>
+                        <span class="practice-link">Learn More<span class="sr-only"> about Elder Law</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                    </a>
+                    
+                    <div style="display: flex; justify-content: center;">
+                        <div class="building-image building-image--ultra-thin" style="max-width: 180px;">
+                            <img src="images/9.jpg" alt="Decorative oval window at Ferguson Widmayer & Clark PC historic Ann Arbor law office" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
@@ -109,11 +251,11 @@
         <div class="container">
             <div class="footer-main">
                 <div class="footer-content">
-                    <div class="footer-brand">
+                    <a href="index.html" class="footer-brand">
                         <span class="logo-text">Ferguson Widmayer <span class="logo-ampersand">&</span> Clark</span>
-                        <span class="logo-suffix">Attorneys & Legal Counsel</span>
+                        <span class="logo-suffix">Estates, Trusts, Business, and Legacy Planning</span>
                         <p class="footer-tagline">Trusted legal counsel in Ann Arbor, Michigan</p>
-                    </div>
+                    </a>
                     <nav class="footer-nav" aria-label="Footer navigation">
                         <div class="footer-nav-group">
                             <h4>Navigation</h4>
@@ -121,52 +263,83 @@
                                 <li><a href="practice-areas.html">Practice Areas</a></li>
                                 <li><a href="attorneys.html">Attorneys</a></li>
                                 <li><a href="our-story.html">Our Story</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
                                 <li><a href="index.html#contact">Contact</a></li>
                             </ul>
                         </div>
-                        <div class="footer-nav-group">
+                        <div class="footer-nav-group footer-nav-group--wide">
                             <h4>Practice Areas</h4>
-                            <ul>
+                            <ul class="practice-areas-list">
                                 <li><a href="estate-planning.html">Estate Planning</a></li>
-                                <li><a href="business-law.html">Business Law</a></li>
-                                <li><a href="probate.html">Probate</a></li>
+                                <li><a href="probate.html">Probate & Trust Administration</a></li>
+                                <li><a href="advanced-wealth-tax-planning.html">Advanced Wealth & Tax Planning</a></li>
+                                <li><a href="business-law.html">Real Estate, Business & Tax Law</a></li>
+                                <li><a href="adoptions.html">Adoptions & Name Changes</a></li>
+                                <li><a href="prenuptial-agreements.html">Prenuptial Agreements</a></li>
+                                <li><a href="elder-law.html">Elder Law</a></li>
                             </ul>
                         </div>
                         <div class="footer-nav-group">
                             <h4>Contact</h4>
                             <ul>
                                 <li><a href="tel:+17346620222">(734) 662-0222</a></li>
-                                <li>538 North Division Street</li>
-                                <li>Ann Arbor, MI 48104</li>
+<li><a href="https://maps.google.com/?q=538+North+Division+Street,+Ann+Arbor,+MI+48104" target="_blank" rel="noopener noreferrer" class="address-link">538 North Division Street<br>Ann Arbor, MI 48104<span class="sr-only"> (opens in new tab)</span></a></li>
                             </ul>
                         </div>
                     </nav>
                 </div>
                 <div class="footer-map-wrapper">
-                    <a href="https://maps.google.com/?q=538+North+Division+Street,+Ann+Arbor,+MI+48104" target="_blank" rel="noopener noreferrer" class="footer-map-link" aria-label="Open address in Google Maps">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.8876!2d-83.7496!3d42.2856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883cae3a79f1e2a7%3A0x8d0c5e5c0b5f5b5a!2s538%20N%20Division%20St%2C%20Ann%20Arbor%2C%20MI%2048104!5e0!3m2!1sen!2sus!4v1703800000000!5m2!1sen!2sus"
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Ferguson Widmayer & Clark location map">
-                        </iframe>
+                    <a href="https://maps.google.com/?q=538+North+Division+Street,+Ann+Arbor,+MI+48104" target="_blank" rel="noopener noreferrer" class="footer-map-link" aria-label="Open address in Google Maps (opens in new tab)">
+                        <img src="images/ann-arbor-map.png" alt="Map showing Ferguson Widmayer & Clark location at 538 North Division Street, Ann Arbor, Michigan" class="footer-map-image" loading="lazy">
                         <div class="map-overlay">
                             <span class="map-cta">Open in Maps</span>
                         </div>
                     </a>
+                    <a href="https://maps.google.com/?q=538+North+Division+Street,+Ann+Arbor,+MI+48104" target="_blank" rel="noopener noreferrer" class="footer-map-btn">Open in Maps<span class="sr-only"> (opens in new tab)</span></a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="copyright">© 2025 Ferguson Widmayer & Clark. All rights reserved.</p>
+                <p class="copyright">© 2026 Ferguson Widmayer & Clark. All rights reserved | <a href="attorney-mara-kent.html" class="web-design-link">Web Design: Mara Kent</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+                <div class="footer-buttons">
+                    <a href="#" class="btn btn-primary btn-sm">Client Portal</a>
+                    <a href="#" class="btn btn-primary btn-sm">Make a Payment</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" src="" alt="">
+        <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        function openLightbox(src, alt) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+            
+            lightbox.style.display = 'flex';
+            img.src = src;
+            img.alt = alt;
+            caption.textContent = alt;
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
 </body>
 </html>
-
