@@ -772,6 +772,35 @@ p:last-child {
   transform: translateX(4px);
 }
 
+/* Practice card with side images (e.g., Elder Law) */
+.practice-card-with-images {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+  margin-top: var(--space-xl);
+}
+
+.practice-side-image {
+  display: flex;
+  justify-content: center;
+}
+
+.practice-side-image .building-image {
+  max-width: 180px;
+}
+
+@media (max-width: 768px) {
+  .practice-card-with-images {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .practice-side-image {
+    display: none;
+  }
+}
+
 .practice-preview .section-cta .btn-outline {
   color: var(--color-white);
   border-color: rgba(255, 255, 255, 0.4);
