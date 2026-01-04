@@ -2885,15 +2885,23 @@ a.footer-brand:hover {
     gap: var(--space-xl);
   }
 
+  .site-footer {
+    padding-bottom: var(--space-3xl);
+  }
+
   .footer-bottom {
     flex-direction: column;
-    gap: var(--space-md);
+    gap: var(--space-lg);
     text-align: center;
+    padding-top: var(--space-2xl);
+    margin-top: var(--space-lg);
   }
 
   .footer-buttons {
     flex-direction: column;
     width: 100%;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
   }
 
   .footer-buttons .btn {
