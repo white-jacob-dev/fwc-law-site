@@ -2875,8 +2875,66 @@ a.footer-brand:hover {
     grid-template-columns: 1fr;
   }
 
+  /* Attorney cards on mobile - cleaner stacking */
+  .attorneys-full .attorney-card {
+    padding: var(--space-lg);
+    text-align: center;
+  }
+
+  .attorneys-full .attorney-card .attorney-photo-small {
+    order: -1;
+    margin: 0 auto var(--space-md);
+    width: 80px;
+    height: 80px;
+  }
+
+  .attorneys-full .attorney-focus {
+    font-size: 0.7rem;
+    line-height: 1.5;
+  }
+
+  .attorney-arrow {
+    display: none;
+  }
+
   .attorney-main {
     padding: var(--space-lg);
+  }
+
+  /* Stack images below/above text on mobile */
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-commitment-box .commitment-content {
+    flex-direction: column;
+  }
+
+  .story-commitment-box .commitment-content img,
+  .story-commitment-box .commitment-content .commitment-image {
+    order: -1;
+    max-width: 200px;
+    margin: 0 auto var(--space-lg);
+  }
+
+  .building-highlight {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .building-highlight .building-photo {
+    display: none;
+  }
+
+  .building-feature {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .building-feature .building-feature-image {
+    order: -1;
+    max-width: 250px;
+    margin: 0 auto;
   }
 
   /* Footer */
