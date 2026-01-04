@@ -2632,7 +2632,8 @@ a.footer-brand:hover {
     gap: var(--space-lg);
   }
 
-  .attorneys-grid--full {
+  .attorneys-grid--full,
+  .attorneys-full .attorneys-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -2871,8 +2872,10 @@ a.footer-brand:hover {
     grid-template-columns: 1fr;
   }
 
-  .attorneys-grid--full {
+  .attorneys-grid--full,
+  .attorneys-full .attorneys-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-lg);
   }
 
   /* Attorney cards on mobile - cleaner stacking */
